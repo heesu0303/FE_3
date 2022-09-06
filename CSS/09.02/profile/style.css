@@ -1,0 +1,89 @@
+/* 사용자 유저 스타일 리셋 */
+h1, h2, p, ul{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+body {
+    background-image: url(images/background.gif);
+}
+
+.wrapper {
+    background-color : #eee;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(images/cover04.png);
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+}
+
+.header img {
+    background-color : rgb(147, 190, 223);
+    border: 5px solid;
+    border-radius: 100px / 50px;
+    width: 200px;
+}
+
+.header h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.header p {
+    border-top: 5px solid;
+    width: fit-content; /* IE는 지원안됌 */
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.section {
+    background-image: url(images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 40px center;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+.section.skill {
+    background-image: url(images/icon-skills.png);
+}
+
+.section h2 {
+    color: palevioletred;
+    margin-bottom: 20px;
+}
+
+.section li {
+    border-left: 4px solid gray;
+    padding: 10px 20px;
+}
+
+.footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.link {
+    display: inline-block;
+    border: 1px solid rgb(198, 197, 197);
+    border-radius: 30px;
+    padding: 10px 20px;
+    color:rgb(198, 197, 197);
+}

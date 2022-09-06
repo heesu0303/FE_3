@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>hello</h1>
+    <!-- 스크린 리더가 읽지 않음, 읽지 않게 하려고 설정할 수 있음-->
+    <img src="jeju.jpg" alt="">
+    <!-- 스크린 리더가 'a'이미지 라고 읽음 -->
+    <img src="jeju.jpg">
+    <!-- 스크린 리더가 '이미지'라고 읽음 -->
+    <img src="jeju.jpg" alt="이미지">
+    <!-- 상대경로 : 현재 폴더에 jeju.jpg -->
+    <img src="./jeju.jpg" alt="이미지">
+    <!-- 상대경로 : 상위 폴더 > img폴더 > jeju.jpg -->
+    <img src="../img/jeju.jpg" alt="이미지">
+    <!-- 절대경로 :  -->
+    <img src="/Users/heesujang/LIKELION/HTML/jeju.jpg" alt="이미지">
+
+    <img width="200px" srcset="img/logo_1.png 2x, img/logo_2.png 3x" src="jeju.jpg" alt="test">
+</body>
+</html>

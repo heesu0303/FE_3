@@ -37,7 +37,6 @@ body {
     margin-bottom: 14px;
 }
 
-.animal-ground p {
+.animal-ground p + p {
     margin-top: 1em;
-    line-height: 20px;
 }

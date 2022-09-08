@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        .wrapper {
+            position: relative; /* 자식 위치가 움직이지 않게 고정 */
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+        }
         .ear_left {
             width: 100px;
             height: 100px;
@@ -79,13 +85,14 @@
     </style>
 </head>
 <body>
-    <div class="ear_left"></div>
-    <div class="ear_right"></div>
-    <div class="face"></div>
-    <div class="eye_left"></div>
-    <div class="eye_right"></div>
-    <div class="nose"></div>
-    <div class="mouse"></div>
-
+    <div class="wrapper">
+        <div class="ear_left"></div>
+        <div class="ear_right"></div>
+        <div class="face"></div>
+        <div class="eye_left"></div>
+        <div class="eye_right"></div>
+        <div class="nose"></div>
+        <div class="mouse"></div>
+    </div>
 </body>
 </html>

@@ -27,3 +27,130 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
+
+body {
+    background-color: #5B2386;
+}
+
+p {
+    font-family: 'GmarketSansMedium';
+}
+
+button {
+    font-family: 'GmarketSansBold';
+}
+
+/* 버튼 스타일 */
+.btn-style {
+    background-color: #FCEE21;
+    font-size: 24px;
+    text-align: center;
+    color: #5B2386;
+    padding: 21px 49px;
+    border-radius: 56px;
+}
+
+.share {
+    background-color: white;
+}
+
+.modal {
+    border: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+    width: 800px;
+    margin: 150px auto;
+    text-align: center;
+    color: white;
+}
+
+.img-title {
+    width: 564px;
+}
+
+.img-clock {
+    margin-top: -190px;
+}
+
+.img-sub-title {
+    margin-top: 40px;
+}
+
+.img-quotes {
+    margin-top: 91px;
+}
+
+.strong-txt {
+    font-size: 24px;
+    font-family: 'GmarketSansBold';
+    font-weight: bold;
+}
+
+.txt-desc {
+    margin: -40px 0 80px 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.txt-style {
+    font-size: 24px;
+    line-height: 90px;
+}
+
+.cont-inp input {
+    width: 228px;
+    height: 57px;
+    font-size: 24px;
+    font-family: 'GmarketSansMedium';
+    color: #BABCBE;
+    text-align: center;
+    border-radius: 7px;
+    margin: 14px 10px;
+}
+
+.cont-inp button, .cont-result button {
+    margin: 100px 0;
+}
+
+.img-click {
+    vertical-align: middle;
+}
+
+.cont-result h2 {
+    display: none;
+}
+.cont-result strong {
+    font-size: 72px;
+    font-weight: bold;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.txt-footer {
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 20px;
+}
+
+/* 모달 */
+.cont-madal {
+    width: 800px;
+    height: 805px;
+    background-color: white;
+    border-radius: 30px;
+    padding-top: 100px;
+}
+
+.img-fight {
+    width: 396px;
+    margin: 0 100px;
+}
+.img-dream {
+    width: 233px;
+    margin: 30px 100px;
+}
+.img-licat {
+    margin: 40px 0 80px 0;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container {
+            display: flex;
+            /* flex-direction: column; */
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .box {
+            /*  
+            width와 height가 좀 더 강제적인 느낌
+            flex-basis는 유연한 느낌
+
+            flex-basis 속성은 유연한(flexible) 크기를 가진다. 즉, 고정적인 width, height 값을 지정해 줄 때와 달리 축의 방향에 따라, 또 내부 콘텐츠에 따라 크기가 가변적, 유동적으로 변할 수 있다.
+            */
+            background-color: beige;
+            border: 5px solid royalblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus minus perspiciatis aliquid! Quis dolore enim quas. Labore amet quo libero autem vitae, sunt non deleniti. Voluptates consequuntur in magni fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloremque veniam eligendi quasi adipisci. Amet ipsa accusamus repudiandae necessitatibus, inventore dolorum saepe, tempora culpa possimus aspernatur exercitationem laudantium natus voluptates.</div>
+        <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, et.</div>
+        <div class="box">lorem</div>
+      </div>
+</body>
+</html>

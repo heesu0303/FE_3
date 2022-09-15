@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .items {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            border: 1px solid #000;
+        }
+        .item:nth-child(1) {
+            /* 넓이가 아니라 여백이 늘어나거나 줄어들 때 2배로 늘어나거나 줄어듬 */
+            /* 콘텐츠를 제외한 남은 여백이 다 사라지면 같아짐 */
+            flex-grow: 1;
+        }
+        .item:nth-child(2) {
+            flex-grow: 1;
+        }
+        .item:nth-child(3) {
+            flex-grow: 1;
+        }
+        .item:nth-child(4) {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items">hello</div>
+        <div class="items">hello</div>
+        <div class="items">hello</div>
+        <div class="items">hello</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div:nth-child(1) {
+            background-color: red;
+        }
+        div:nth-child(n) {
+            background-color: blue;
+        }
+        /* n은 0부터 시작함 */
+        div:nth-child(2n) {
+            background-color: green;
+        }
+        div:nth-child(2n + 1) {
+            background-color: green;
+        }
+        div:nth-child(3n) {
+            background-color: yellow;
+        }
+        /* odd(홀), even(짝) 키워드 사용 가능 */
+        div:nth-child(odd) {
+            background-color: pink;
+        }
+        a:visited {
+            color: red;
+        }
+        /* 최신 선택자. 실무에서 사용할 일 거의 없음*/
+        li:not(.one) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        가상 클래스 선택자 : 클래스가 없는데 있는 것처럼 처리(콜론이 1개)
+        가상 요소 선택자 : 요소가 없는데 있는 것처럼 처리(콜론이 2개)
+     -->
+     <div>hello</div>
+     <div>hello</div>
+     <div>hello</div>
+     <div>hello</div>
+     <div>hello</div>
+     <div>hello</div>
+     <a href="https://www.paullab.co.kr">hello</a>
+     <ul>
+         <li>hello world</li>
+         <li>hello world</li>
+         <li class="one">hello world</li>
+         <li>hello world</li>
+         <li>hello world</li>
+     </ul>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        button {
+            border: 1px solid darkgoldenrod;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: blueviolet;
+            color: white;
+            transition: all .3s;
+        }
+        button:hover {
+            background-color: yellowgreen;
+            letter-spacing: 3px;
+        }
+        a:active{
+            color: red;
+        }
+        input:focus{
+            border: 5px solid royalblue;
+        }
+        input:checked+label{
+            background-color: lightgreen;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <button>hello</button>
+    <a href="#">hello</a>
+    <form action="" method="get">
+        <input type="text">
+        <input type="text">
+    </form>
+    <input id="check" type="checkbox">
+    <label for="check">오늘 아침은 삼겹살입니다.</label>
+    <!-- 아래 ul의 li와 사촌. 형제xxx -->
+    <ul>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+    <ul>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+</body>
+</html>

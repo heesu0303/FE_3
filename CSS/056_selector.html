@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* class뿐만 아니라 다양한 필드에 적용할 수 있음 */
+        div[class="~weniv"] {
+            color: red;
+        }
+        /* 리디북스 예시 */
+        div[data-track-params="~weniv"] {
+            color: blue;
+        }
+        div.weniv {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="weniv">hello world1</div>
+    <div class="">hello world2</div>
+</body>
+</html>

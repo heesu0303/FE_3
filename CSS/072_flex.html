@@ -7,30 +7,31 @@
     <title>flex</title>
     <style>
         div{
-            width: 50px;
-            height: 50px
+            width:50px;height:50px
         }
-        
+
         .blue{background:blue}
         .green{background:green}
         .yellow{background:yellow}
-        
+
+
         article{  
-            background: black;
-            width: 350px;
-            height: 300px;
+            background:black;
+            width:350px;
+            height:300px;
             display: flex;
             justify-content: space-between;
+
         }
 
         .right_side, .center, .left_side{
-            height: 300px;
+            height:300px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
+
         .right_side {
-            display: flex;
             flex-direction: column-reverse;
         }
     </style>

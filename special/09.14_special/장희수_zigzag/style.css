@@ -6,3 +6,63 @@
 	*/
 }
 
+h1, ul{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #51318b;
+}
+
+.wrapper {
+	width: 1080px;
+	margin: 100px auto;
+}
+
+.header-portfolio {
+	display: flex;
+	align-items: center;
+}
+
+.header-portfolio h1 {
+	font-size: 40px;
+	color: white;
+}
+
+.header-portfolio p {
+	font-size: 14px;
+	color: #a887e1;
+}
+
+.header-line {
+
+}
+
+.main-portfolio {
+	display: flex;
+	flex-direction: column;
+	margin: 76px 0;
+}
+
+.main-portfolio section {
+	background-color: white;
+	display: flex;
+	margin: 24px 0;
+}
+
+.main-portfolio h2 {
+	font-size: 30px;
+}
+
+.main-portfolio h3 {
+	font-size: 18px;
+}
+
+li {
+	font-size: 14px;
+}
+
+.main-portfolio img {
+	width: 26%;
+}

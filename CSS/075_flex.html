@@ -9,11 +9,12 @@
         /* align-items는 stretch가 기본값. 부모의 높이를 갖게됨 */
         .container {
             display: flex;
-            height: 200px;
+            /* height: 200px; */
             /* align-items: stretch; */
-            /* align-items: flex-start; */
+            /* align-items: center; */
+            align-items: flex-start;
             /* align-items: flex-end; */
-            align-items: baseline;
+            /* align-items: baseline; */
         }
         .item {
             width: 50px;
@@ -21,6 +22,7 @@
             border: 5px solid darkorchid;
             background-color: cadetblue;
         }
+        
         .item:nth-child(1) {
             font-size: 10px;
         }
@@ -39,6 +41,14 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="item">hello</div>
+        <div class="item">hello</div>
+        <div class="item">hello</div>
+        <div class="item">hello</div>
+        <div class="item">hello</div>
+        <div class="item">hello</div>
+    </div>
     <div class="container">
         <div class="item">hello</div>
         <div class="item">hello</div>

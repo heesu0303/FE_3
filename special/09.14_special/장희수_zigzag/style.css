@@ -6,11 +6,13 @@
 	*/
 }
 
-h1, h2, h3, ul{
+/* reset */
+h1, h2, h3, ul, li{
 	margin: 0;
 	padding: 0;
 }
 
+/* content */
 body {
 	background-color: #673399;
 }
@@ -20,6 +22,7 @@ body {
 	margin: 100px auto;
 }
 
+/* header */
 .header-portfolio {
 	display: flex;
 	align-items: center;
@@ -53,7 +56,6 @@ body {
 }
 
 /* main */
-
 .main-portfolio {
 	display: flex;
 	align-items: center;
@@ -62,11 +64,19 @@ body {
 }
 
 .main-sec-list {
+	height: 163px;
 	display: flex;
 	align-items: center;
-	background-color: white;
 	margin-bottom: 24px;
-	flex-grow: 1;
+	overflow: hidden;
+}
+.main-sec-list.reverse {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.main-sec-list:last-child {
+	margin-bottom: 0;
 }
 
 .main-tit-img {
@@ -74,41 +84,54 @@ body {
 	position: relative;
 }
 
-.main-portfolio h2 {
+.main-tit-img h2 {
 	font-size: 30px;
 	color: white;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
-.main-portfolio img {
+.main-tit-img img {
 	width: 100%;
 	vertical-align: top;
 	object-fit: cover;
+	opacity: 50%;
+}
+
+.check-list {
+	flex-grow: 1; /* flex-basis의 값에서 더 늘어나도 되는지 지정하는 값 */
+}
+
+.check-list ul {
+	padding: 24px;
+	background-color: white;
 }
 
 .check-list h3 {
 	font-size: 18px;
-	margin-bottom: 32px;
+	margin-bottom: 25px;
 	color: #673399;
 }
 
-ul {
-	padding: 24px;
-}
-
-li {
-	list-style-type: none;
+.check-list li {
+	list-style: none;
 	font-size: 14px;
-	/* line-height: 2.2em; */
+	padding-bottom: 12px;
 }
 
-li::before {
+.check-list li:last-child {
+	padding-bottom: 0;
+}
+
+.check-list li::before {
 	content: '';
+	display: inline-block;
 	width: 10px;
 	height: 10px;
 	background-color: #bd8fe8;
-	/* font-size: 1.4rem; */
+	border-radius: 50%;
+	margin-right: 10px;
 }

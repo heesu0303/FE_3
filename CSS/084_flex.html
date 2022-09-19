@@ -9,12 +9,36 @@
         /* flex-shrink */
         .container {
             display: flex;
+            /* flex-direction: column; */
+            
+            /* 4. 넓이를 다 포함하지 못할 때는 개행. 떨어지게! */
+            flex-wrap: wrap;
+        }
+        .item {
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .item:nth-child(2) {
+            /* 1. 주 축에 따라 basis가 넓이가 되기도 하고, 높이가 되기도 함 */
+            flex-basis: 150px; 
+
+            /* 2. 두 개의 값이 있었을 때, basis의 값을 우선함 */
+            /* flex-basis: 150px; */
+            /* width: 100px; */
+
+            /* 3. width의 값은 넓이를 강제함 */
+            /* width: 100px; */
+            flex-basis: 100px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item"></div>
+        <div class="item">1</div>
+        <div class="item">2222222222222222222222</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
     </div>
 </body>
 </html>

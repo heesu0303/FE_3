@@ -29,7 +29,8 @@ body {
 }
 
 .header-portfolio h1 {
-	width: 282px;
+	/* width: 282px; */
+	width: 26%;
 	font-size: 40px;
 	color: white;
 	letter-spacing: -0.013em;

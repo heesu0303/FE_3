@@ -12,7 +12,7 @@
     left: 50%;
     transform: translate(-50%, -50%) rotateY(100deg);
     transform-style: preserve-3d; /* 원근감을 살림(3d효과 보존시켜서 자식들에게도 적용) */
-    /* transition: 0.3s; */
+    transition: 0.3s;
 }
 
 .list-item li {

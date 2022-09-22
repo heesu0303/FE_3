@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+
+/* 버튼 스타일 */
+.btn-style {
+    background: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    padding: 21px 49px;
+    color: #5B2386;
+}
+
+.btn-style.share {
+    background: #FFFFFF;
+}
+
+.btn-style.modal {
+    border: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/**********/
+/* layout */
+/**********/
+body {
+    background-color: #5B2386;
+    font-family: 'GmarketSansMedium';
+}
+
+.section-wrapper {
+    width: 800px;
+    margin: 0 auto;
+    padding: 120px 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
+/**********/
+/* header */
+/**********/
+.header-title::after {
+    display: inline-block;
+    content: '';
+    width: 250px;
+    height: 230px;
+    background: url("../img/clock.png") no-repeat;
+    background-position: center;
+    margin: -175px 0 66px 0;
+}
+
+.header-title .header-img-title {
+    width: 564px;
+}
+
+/**********/
+/* main */
+/**********/
+.section-subtitle h2{
+    margin-bottom: 78px;
+}
+
+.section-subtitle p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.section-subtitle p::after {
+    display: inline-block;
+    content: '';
+    width: 500px;
+    height: 96px;
+    background: url("../img/quotes.png") no-repeat;
+    background-position: center;
+    margin: -110px 0 80px 0;
+}
+
+.section-subtitle p strong {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+}
+/* form */
+.section-form {
+     margin-bottom: 147px;
+     position: relative;
+}
+
+.section-form button {
+    margin-top: 88px;
+}
+
+.section-form::after {
+    display: inline-block;
+    content: '';
+    width: 64px;
+    height: 72px;
+    background: url("../img/click.png") no-repeat;
+    background-position: center;
+    position: absolute;
+    margin: 115px 0 0 5px;
+}
+
+.form-content .txt-content {
+    font-size: 24px;
+}
+
+.form-content .input-style {
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    color: #BABCBE;
+    text-align: center;
+    margin: 0 17px 27px 17px;
+}
+/* result */
+.section-result {
+    margin-bottom: 130px;
+}
+
+.section-result .txt-content {
+    font-size: 24px;
+    margin-bottom: 17px;
+}
+
+.section-result strong {
+    font-family: 'GmarketSansBold';
+    font-size: 72px;
+    margin: 0 12px;
+    vertical-align: middle;
+}
+
+.section-result button {
+    margin: 110px 9px 0 9px;
+}
+
+/**********/
+/* footer */
+/**********/
+.footer-content .footer-img-logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.footer-content small {
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+}
+
+/* modal */
+.section-modal {
+    display: none;
+    width: 800px;
+    height: 880px;
+    background-color: white;
+    border-radius: 30px;
+    padding-top: 100px;
+}
+
+.img-fight {
+    width: 396px;
+    margin: 0 100px;
+}
+.img-dream {
+    width: 233px;
+    margin: 30px 100px;
+}
+.img-licat {
+    margin: 40px 0 80px 0;
+}

@@ -16,13 +16,21 @@
 .btn-style {
     border: 0;
     outline: 0;
+    width: 94px;
+    height: 33px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    font-size: 13px;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .btn-style.get {
-    
+    height: 106px;
+    background: #6327FE;
+    color: white;
 }
 
 /**********/
@@ -116,26 +124,160 @@ body {
     content: '원';
 }
 
+/* return-money */
 .section-item .sec-money {
-    background-color: darkgoldenrod;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+    margin-bottom: 12px;
 }
 
-.section-item .sec-choice-item {
-    background-color: salmon;
+.section-item .return-money {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 33px;
+    background: #EAE8FE;
+    border-radius: 5px;
+    font-size: 14px;
 }
+
+.section-item .return-money .txt-changes {
+    margin-right: auto;
+    margin-left: 10px;
+}
+.txt-changes::after {
+    content: ' :';
+}
+.section-item .return-money .show-return-money {
+    margin-left: auto;
+    margin-right: 10px;
+}
+.show-return-money::after {
+    content: ' 원';
+}
+
+.section-item .input-money {
+    width: 200px;
+    height: 33px;
+    border: 2px solid #BDBDBD;
+    border-radius: 5px;
+    color: #BDBDBD;
+}
+
+input::placeholder {
+    font-size: 13px;
+    color: #BDBDBD;
+    text-indent: 6px;
+}
+input:focus {
+    text-indent: 6px;
+}
+
+/* choice-item */
+.section-item .sec-choice-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-item .sec-choice-item .list-choice-item {
+    width: 200px;
+    height: 106px;
+    background: #EAE8FE;
+    border: 2px solid #BDBDBD;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.list-choice-item li {
+    width: 170px;
+    height: 46px;
+    background-color: white;
+    margin: 12px 18px 6px 12px;
+    border-radius: 6px;
+}
+
+.list-choice-item .figure-choice-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.figure-choice-item img {
+    width: 18px;
+}
+.figure-choice-item figcaption {
+    font-size: 9px;
+    color: #333333;
+    margin: 18px 0 18px -25px;
+}
+.figure-choice-item p {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #BDBDBD;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 9.5px;
+}
+
 
 /* result */
 .section-result {
-    background-color: #FFFFFF;
+    display: grid;
+    grid-template-rows: 50px 475px;
     width: 360px;
-    flex: 1 1 auto;
-    /* padding: 31px 27px 28px 27px; */
+    gap: 20px;
+    /* flex: 1 1 auto; */
 }
 
 .section-result .sec-my-money {
-    background-color: tan;
+    background-color: white;
+}
+
+.sec-my-money div {
+    display: flex;
+    align-items: center;
+    width: 306px;
+    height: 32px;
+    background: #EAE8FE;
+    border-radius: 5px;
+    margin: 9px 27px;
+}
+.sec-my-money h3 {
+    margin-right: auto;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.sec-my-money h3::after {
+    content: ' :';
+}
+.sec-my-money p {
+    margin-left: auto;
+    margin-right: 10px;
+}
+.sec-my-money p::after {
+    content: ' 원';
 }
 
 .section-result .sec-my-item {
-    background-color: lawngreen;
+    display: grid;
+    grid-template-rows: auto 364px auto;
+    justify-content: center;
+    background-color: white;
+}
+
+.section-result .sec-my-item h3 {
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.section-result .sec-my-item .list-my-item {
+    width: 306px;
+    height: 364px;
+    background: #EAE8FE;
+    border: 2px solid #BDBDBD;
+    border-radius: 5px;
+    overflow: scroll;
 }

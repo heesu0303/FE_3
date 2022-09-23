@@ -1,6 +1,141 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+
+/**********/
+/* button */
+/**********/
+.btn-item {
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    background: white;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-style {
+    border: 0;
+    outline: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.btn-style.get {
+    
+}
+
+/**********/
+/* layout */
+/**********/
 body {
     font-family: 'Noto Sans KR', sans-serif;
+    background-color: #EAE8FE;
+}
 
+.section-wrapper {
+    width: 738px;
+    margin: 0 auto;
+}
+
+/**********/
+/* header */
+/**********/
+.header-logo {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+/**********/
+/* main */
+/**********/
+.main-wrap {
+    display: flex;
+    gap: 20px;
+}
+
+/* beverage-list */
+.section-item {
+    background-color: #FFFFFF;
+    width: 360px;
+    /* flex-grow, flex-shrink, flex-basis (== flex: auto) */
+    /* flex: 1 1 auto;  */
+    padding: 31px 27px 28px 27px;
+}
+
+.section-item .sec-item {
+    margin-bottom: 20px;
+}
+
+.section-item .list-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.section-item .list-item li {
+    width: 94px;
+    height: 130px;
+    background: white;
+    /* box-sizing: content-box; */
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section-item .list-item li:hover {
+    outline: 3px solid #6327FE;
+    box-shadow: none;
+}
+
+.section-item .figure-item img {
+    width: 35.86px;
+    margin-top: 10px;
+}
+
+.section-item .figure-item figcaption {
+    font-size: 9px;
+    color: initial;
+    margin: 2px 0 5px 0;
+}
+
+.section-item .figure-item p {
+    background: #6327FE;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px 16px 5px 15px;
+    margin-bottom: 9px;
+    
+}
+
+.section-item .figure-item p::after {
+    content: '원';
+}
+
+.section-item .sec-money {
+    background-color: darkgoldenrod;
+}
+
+.section-item .sec-choice-item {
+    background-color: salmon;
+}
+
+/* result */
+.section-result {
+    background-color: #FFFFFF;
+    width: 360px;
+    flex: 1 1 auto;
+    /* padding: 31px 27px 28px 27px; */
+}
+
+.section-result .sec-my-money {
+    background-color: tan;
+}
+
+.section-result .sec-my-item {
+    background-color: lawngreen;
 }

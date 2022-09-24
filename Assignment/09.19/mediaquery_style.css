@@ -31,6 +31,7 @@
     height: 106px;
     background: #6327FE;
     color: white;
+    font-weight: 700;
 }
 
 /**********/
@@ -145,6 +146,7 @@ body {
 .section-item .return-money .txt-changes {
     margin-right: auto;
     margin-left: 10px;
+    font-weight: 500;
 }
 .txt-changes::after {
     content: ' :';
@@ -152,6 +154,7 @@ body {
 .section-item .return-money .show-return-money {
     margin-left: auto;
     margin-right: 10px;
+    font-weight: 500;
 }
 .show-return-money::after {
     content: ' 원';
@@ -186,7 +189,7 @@ input:focus {
     background: #EAE8FE;
     border: 2px solid #BDBDBD;
     border-radius: 5px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .list-choice-item li {
@@ -208,6 +211,7 @@ input:focus {
 }
 .figure-choice-item figcaption {
     font-size: 9px;
+    font-weight: 500;
     color: #333333;
     margin: 18px 0 18px -25px;
 }
@@ -247,6 +251,7 @@ input:focus {
     margin-right: auto;
     margin-left: 10px;
     font-size: 14px;
+    font-weight: 500;
 }
 .sec-my-money h3::after {
     content: ' :';
@@ -261,14 +266,14 @@ input:focus {
 
 .section-result .sec-my-item {
     display: grid;
-    grid-template-rows: auto 364px auto;
+    grid-template-rows: 58px 364px 52px;
     justify-content: center;
     background-color: white;
 }
 
 .section-result .sec-my-item h3 {
-    font-weight: 700;
     font-size: 14px;
+    font-weight: 700;
     margin-top: 25px;
     text-align: center;
 }
@@ -279,5 +284,48 @@ input:focus {
     background: #EAE8FE;
     border: 2px solid #BDBDBD;
     border-radius: 5px;
-    overflow: scroll;
+    overflow: auto;
+}
+.section-result .sec-my-item .list-my-item li {
+    width: 276px;
+    height: 46px;
+    background-color: white;
+    margin: 12px 18px 6px 12px;
+    border-radius: 6px;
+}
+
+.list-my-item .figure-my-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.figure-my-item img {
+    width: 18px;
+    margin-left: -25px;
+}
+.figure-my-item figcaption {
+    font-size: 9px;
+    font-weight: 500;
+    color: #333333;
+    margin: 18px 0 18px -120px;
+}
+.figure-my-item p {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #BDBDBD;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 9.5px;
+}
+
+.sec-my-item .total-price{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 6px;
+    text-align: right;
+}
+
+.sec-my-item .total-price::after {
+    content: ' 원';
 }

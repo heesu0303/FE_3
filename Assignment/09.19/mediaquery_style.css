@@ -353,3 +353,20 @@ input:focus {
 /***************/
 /* media-query */
 /***************/
+@media (max-width: 360px) {
+    body {
+        background-color: white;
+    }
+    .header-logo img {
+        width: 166px;
+    }
+    .main-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -50px;
+    }
+    .section-result {
+        margin-top: -35px;
+    }
+}

@@ -97,7 +97,7 @@ body {
     overflow: hidden;
 }
 
-.section-item .list-item li:hover {
+.section-item .list-item li:hover:not(.sold-out) {
     outline: 3px solid #6327FE;
     box-shadow: none;
 }
@@ -193,7 +193,7 @@ input:focus {
     background: #EAE8FE;
     border: 2px solid #BDBDBD;
     border-radius: 5px;
-    overflow: auto;
+    overflow-x: scroll;
 }
 
 .list-choice-item li {
@@ -338,7 +338,8 @@ input:focus {
 /* sold-out */
 /************/
 .sold-out::after {
-    content: '';
+    content: '품절';
+    color: transparent;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -349,6 +350,19 @@ input:focus {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/**********/
+/* scroll */
+/**********/
+/*
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+*/
+
 
 /***************/
 /* media-query */

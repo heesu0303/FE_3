@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAWA,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,GAAG;EACrB,UAAU,EAAE,QAAQ;CAIvB;;AARD,AAKI,IALA,AAKC,MAAM,CAAC;EACJ,gBAAgB,EAAE,IAAI;CACzB",
+    "sources": [
+        "003_ampersand.scss"
+    ],
+    "names": [],
+    "file": "003_ampersand.css"
+}

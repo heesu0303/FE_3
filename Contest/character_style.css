@@ -112,15 +112,15 @@ body {
 }
 
 .ear-curl.ecurl2 {
-    top: 248px;
-    width: 60px;
-    height: 60px;
+    top: 260px;
+    width: 50px;
+    height: 50px;
 }
 .ear-curl.ecurl2.left {
-    left: 35px;
+    left: 30px;
 }
 .ear-curl.ecurl2.right {
-    right: 35px;
+    right: 30px;
 }
 
 .ear-curl.ecurl3 {
@@ -237,6 +237,16 @@ body {
     left: 320px;
     width: 140px;
     height: 130px;
+}
+.wcurl11-2 {
+    position: absolute;
+    top: 165px;
+    left: 465px;
+    width: 8px;
+    height: 25px;
+    background: black;
+    border-radius: 83% 17% 69% 31% / 90% 76% 24% 10%;
+    transform: rotate(45deg);
 }
 .wrap-curl.wcurl12 {
     top: 70px;

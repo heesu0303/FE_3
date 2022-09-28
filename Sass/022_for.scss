@@ -1,0 +1,12 @@
+// #{$변수명}
+@for $i from 1 through 3 {
+    .photo-box:nth-child(#{$i}) {
+        background-image: url("../assets/phoster#{$i}.png");
+    }
+}
+
+@for $heesu from 1 through 3 {
+    .profile:nth-child(#{$heesu}) {
+        background-image: url("../assets/phoster#{$heesu}.png");
+    }
+} 

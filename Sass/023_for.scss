@@ -1,0 +1,7 @@
+// #{$변수명}
+@for $heesu from 1 through 3 {
+    .profile-#{$heesu} {
+        background-color: red;
+        font-size: #{$heesu * 10}px; 
+    }
+} 

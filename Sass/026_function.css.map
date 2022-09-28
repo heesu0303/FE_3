@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAuCA,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,4CAAc;CAExB",
+    "sources": [
+        "026_function.scss"
+    ],
+    "names": [],
+    "file": "026_function.css"
+}

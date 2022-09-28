@@ -1,0 +1,9 @@
+$heesu: 10;
+@while $heesu > 1 {
+    $heesu: $heesu - 2;
+    .content-#{$heesu} {
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+}

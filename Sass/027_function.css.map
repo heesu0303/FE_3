@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,IAAsB;CACpC",
+    "sources": [
+        "027_function.scss"
+    ],
+    "names": [],
+    "file": "027_function.css"
+}

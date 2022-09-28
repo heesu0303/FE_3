@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,KAAK,CAAC;EACF,gBAAgB,EAAE,8BAAkB;CACvC;;AAkBD,AAAA,MAAM,CAAC;EACH,SAAS,EAPI,IAAI;CAQpB",
+    "sources": [
+        "007_variable.scss"
+    ],
+    "names": [],
+    "file": "007_variable.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,IAAI,CAAC;EANJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAG,MAAM;EACxB,WAAW,EAAG,MAAM;EAMb,KAAK,EAAE,KAAK;EAEhB,gBAAgB,EAAE,GAAG;CACxB",
+    "sources": [
+        "016_content.scss"
+    ],
+    "names": [],
+    "file": "016_content.css"
+}

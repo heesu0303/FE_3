@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACK,AAAD,UAAO,CAAC;EACJ,UAAU,EAAE,MAAM;CACrB;;AACA,AAAD,QAAK,CAAC;EACF,UAAU,EAAE,GAAG;CAClB;;AAIA,AAAD,WAAQ,CAAC;EACL,UAAU,EAAE,MAAM;CACrB;;AACA,AAAD,UAAO,CAAC;EACJ,UAAU,EAAE,GAAG;CAClB",
+    "sources": [
+        "004ampersand.scss"
+    ],
+    "names": [],
+    "file": "004ampersand.css"
+}

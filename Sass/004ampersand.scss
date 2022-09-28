@@ -1,0 +1,17 @@
+.box {
+    &-yello {
+        background: yellow;
+    }
+    &-red {
+        background: red;
+    }
+}
+
+.btn {
+    &-sumbit {
+        background: yellow;
+    }
+    &-close {
+        background: red;
+    }
+}

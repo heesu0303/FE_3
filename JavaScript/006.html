@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수로 가져올 수 있는 값</title>
+</head>
+<body>
+    <script>
+        // 변수는 포스트잇이다!
+
+        // 변수 선언 방법 x
+        // 변수로 가져올 수 있는 값
+        let x = 10;
+        let y = 100;
+        x = 15;
+        console.log(x + y); // 115
+
+        // 한글(대부분 권장하지 않는다.)
+        let 희수 = 100;
+        console.log(희수 + 희수); // 200
+
+        // 숫자 (x)
+        // let 10 = 100;
+
+        // 숫자 + 문자 (x)
+        // let 1a = 100;
+
+        // 문자 (대소문자를 가림)
+        let abc = 100;
+        let Abc = 200;
+        let aBc = 300;
+
+        // 특수문자
+        // let $__$ = 548; // 이렇게 쓰지마세요.
+        // let $,_ = 10; // 이렇게 쓰지마세요.
+        // let _ = 100; // 반복문 돌 때 의미 없는 변수에 사용
+
+        //변수는 let, const, var, if, else ,.. 지정된 키워드로(예약어) 사용하지 않는다.
+    </script>
+</body>
+</html>

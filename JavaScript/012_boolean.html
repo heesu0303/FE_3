@@ -8,7 +8,33 @@
 </head>
 <body>
     <script>
-        
+        // const(참조 변경 불가), let(변경 가능), var(x)
+        let one = true; // 다른 언어는 True인 경우도 있다.
+        let two = false;
+        let three;
+        let four = null;
+        let five = Infinity; // 비교에서 많이 사용. 최댓값, 최소값 정렬할 때 사용
+
+        console.log(Boolean("")); // false
+        console.log(Boolean(" ")); // ture
+        console.log(Boolean("abc")); // ture
+        console.log(Boolean(0)); // false
+        console.log(Boolean(100)); // true
+        console.log(Boolean(-100)); // true
+        console.log(Boolean(three)); // false
+        console.log(Boolean(four)); // false
+        console.log(Boolean(five)); // true
+        one = 0;
+
+        // 우리를 힘들게 하는 js
+        console.log(Boolean([])); // true 말이 안돼....
+        console.log(Boolean({})); // true 
+
+        if (one) {
+            console.log("hello");
+        } else {
+            console.log("world")
+        }
     </script>
 </body>
 </html>

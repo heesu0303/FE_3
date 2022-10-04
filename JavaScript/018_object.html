@@ -8,21 +8,121 @@
 </head>
 <body>
     <script>
+        // 1. 기본 형태
         let newuser = {
+            // key : value
             id : 'heesu',
-            pw : '1234',
+            pw : '1234', // 81DC9BDB52D04DC20036DBD8313ED055 이렇게 저장합니다. ("MD5는 사용하지 않습니다.")
             name : '장희수',
             email : 'heesu0303@naver.com',
-            active : s
+            active : false
         };
 
-        function sum(x, y) {
-            return X + Y;
-        }
-        console.log(sum); // function의 기능 전체 출력
-        console.log(typeof sum); // function
+        console.log(newuser['id']);
+        console.log(newuser.id);
 
-        sum.value = "heesu";
+        // 2. 아래와 같은 형태로 많이 사용됩니다.
+        let user = [{
+            id : 'jadu',
+            pw : '1234',
+            name : '자두',
+            email : 'heesu0303@naver.com',
+            active : true,
+        }, {
+            id : 'heejang',
+            pw : '1234',
+            name : '희장',
+            email : 'heesu0303@naver.com',
+            active : true
+        }];
+
+        console.log(user[0]["id"]);
+
+        // 3. 아래와 같이 선언이 가능합니다.
+        let a = 10;
+        let b = 20;
+        let c = 30;
+        let e = { a, b, c };
+        console.log(e);
+        
+        // 4. 값을 변경할 수 있다.
+        e["a"] = 50;
+        console.log(e);
+
+        // 5. key 값으로 문자열 외에 다른 값을 넣었을 경우
+        let txt = "hello";
+        let txt2 = {
+            0: 'h',
+            1: 'e',
+            2: 'l',
+            3: 'l',
+            4: 'o'
+        }
+        console.log(txt[1]);
+        console.log(txt2[1]); // 유사 배열 객체
+        // console.log(txt2.1); // error -> map 으로 해결 
+
+        // 6. value의 값으로 문자열 외에 다른 값을 넣었을 경우
+        let test = {
+            one: sum,
+            two: console.log,
+            three: window.innerWidth,
+            four: [10, 20, 30],
+            five : '10',
+            siz: 100
+        }
+        console.log(test);
+        test.two("희수!");
+
+        // 7. key와 value만 뽑아낼 수 없을까?
+        console.log(Object.keys(newuser));
+        console.log(Object.values(newuser));
+        console.log(Object.entries(newuser));
+        // -> map(자료형)에서 사용할 수 있다.
+        // newuser.keys();
+        // newuser.values();
+        // newuser.entries();
+
+        // 8. object spread 용법
+        let 회원정보업데이트 = {
+            name : '희수장',
+            email : 'jang@naver.com'
+        }
+        // newuser['name'] = 회원정보업데이트['name'];
+        // newuser['email'] = 회원정보업데이트['email'];
+        // console.log(newuser);
+        
+        newuser = {...newuser, ...회원정보업데이트};
+        console.log(newuser);
+
+        // 이렇게 하면 2개 다 바뀜
+        // let newuser2 = newuser; 
+        // newuser2["id"] = "helloworld";
+        // console.log(newuser);
+        // console.log(newuser2);
+        
+        // spread 기법을 사용하면 원본을 수정하지 않고 사용할 수 있다!
+        let newuser2 = {...newuser}; 
+        newuser2["id"] = "helloworld";
+        console.log(newuser);
+        console.log(newuser2);
+
+
+        // 함수는 후에 자세히 다룹니다.
+        function sum(x, y) {
+            return x + y;
+        }
+        // console.log(sum); // function의 기능 전체 출력
+        // console.log(typeof sum); // function
+
+        sum.value = "heesu"
+
+        // TMI입니다. 뒤에서 다룰 내용이에요.
+        // console.log(typeof sum);
+        // sum.value = 'hojun';
+        // console.log(console.dir(sum));
+        // console.log(sum.value);
+        // console.log(typeof sum);
     </script>
 </body>
 </html>

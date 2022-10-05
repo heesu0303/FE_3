@@ -140,11 +140,11 @@ strong {
 	}
 
 	.section-field li {
-		flex-basis: 100%;
+		flex-basis: 50%; /* 컨텐츠의 넓이를 강제하지 않는다. */
 	}
 
 	.section-field a {
-		/* padding: 3rem 12rem 13.8rem 3rem; */
+		padding: 3rem 3rem 2rem 3rem;
 		gap: 9.8rem;
 	}
 	
@@ -162,6 +162,7 @@ strong {
 
 	.section-text h1 {
 		font-size: 3.6rem;
+		max-width: calc(100% - 3.2rem); /* 양쪽 여백을 고정하기 위해서 준 값 */
 	}
 	
 	.section-text p {
@@ -176,8 +177,8 @@ strong {
 	}
 
 	.section-field a {
-		padding: 3rem 16.4rem 15rem 3rem;
-
+		padding: 3rem 3rem 2rem 3rem;
+		gap: 11.2.rem;
 	}
 	.section-field .field-title {
 		font-size: 2rem;

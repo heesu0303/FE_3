@@ -19,7 +19,7 @@ let test2 = test.three;
 function sayName() {
     console.log(this.name);
 }
-var name = 'Hero'; // ㅍㅁ만 윈도우에 적용됨
+var name = 'Hero'; // var만 윈도우에 적용됨
 
 let peter = {
     name: 'Peter Parker',

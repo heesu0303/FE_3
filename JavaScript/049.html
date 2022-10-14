@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .canvas {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: black;
+        }
+        .list-btn {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            list-style: none;
+        }
+
+        .canvas.red {
+            background-color: red;
+        }
+        .canvas.yellow {
+            background-color: yellow;
+        }
+        .canvas.green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas"></div>
+    <ul class="list-btn">
+        <li>
+            <button class="red">빨강</button>
+        </li>
+        <li>
+            <button class="yellow">노랑</button>
+        </li>
+        <li>
+            <button class="green">초록</button>
+        </li>
+        
+    </ul>
+    <script>
+        const canvas = document.querySelector('.canvas')
+        const btnRed = document.querySelector('.red');
+        const btnYellow = document.querySelector('.yellow');
+        const btnGreen = document.querySelector('.green');
+
+        const btnArr = [btnRed, btnYellow, btnGreen];
+        
+        // for (let i = 0; i < btnArr.length; i++) {
+
+        // }
+        
+        // btnArr.forEach((item) => {
+
+        // });
+
+        btnArr.forEach(item => {
+            item.addEventListener('click', () => {
+                canvas.classList.remove('red', 'yellow', 'green');
+                if (item.classList.contains("red")) {
+                    canvas.classList.add('red');
+                } else if (item.classList.contains("yellow")) {
+                    canvas.classList.add('yellow');
+                } else if (item.classList.contains("green")) {
+                    canvas.classList.add('green');
+                }
+            })
+        })
+
+
+        // btnRed.addEventListener('click', function(){
+        //     canvas.style.backgroundColor= "red";
+        // })
+        // btnYellow.addEventListener('click', function(){
+        //     canvas.style.backgroundColor= "yellow";
+        // })
+        // btnGreen.addEventListener('click', () => {
+        //     canvas.style.backgroundColor= "green";
+        // })
+
+        // 재현님 코드
+        // btnRed.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow', 'green');
+        //     canvas.classList.add('red');
+        // })
+
+        // btnYellow.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow', 'green');
+        //     canvas.classList.add('yellow');
+        // })
+
+        // btnGreen.addEventListener('click', () => {
+        //     canvas.classList.remove('red', 'yellow', 'green');
+        //     canvas.classList.add('green');
+        // })
+    </script>
+</body>
+</html>

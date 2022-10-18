@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메모장</title>
+    <style>
+        body {
+            background-color: rgb(229, 255, 196);
+        }
+        
+        .sec-main {
+            width: 600px;
+            padding: 100px;
+            margin: 100px auto;
+            background-color: pink;
+            border: 10px solid rgb(158, 158, 158);
+            border-radius: 30px;
+        }
+
+        .sec-memo-area {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .head-title {
+            margin: 0 auto 40px auto;
+            font-size: 30px;
+        }
+
+        #content {
+            margin: 10px 0 20px 0;
+        }
+
+        .sec-memo-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #memo-list {
+            margin-left: 50px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .btn-box {
+            margin: 0 auto;
+        }
+
+        .btn {
+            width: 100px;
+            padding: 10px 0;
+            margin: 0 5px;
+            background-color: skyblue;
+            border: 0;
+            border-radius: 30px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: steelblue;
+            cursor: pointer;
+        }
+        
+        li.clicked > p{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="sec-main">
+        <section class="sec-memo-area">
+            <h1 class="head-title">MEMO</h1>
+            <input id="title" type="text">
+            <textarea id="content" name="" id="" cols="30" rows="15"></textarea>
+            <div class="btn-box">
+                <button id="save-btn" class="btn" type="submit">save</button>
+                <button id="delete-btn" class="btn" type="submit">delete</button>
+            </div>
+        </section>
+    </section>
+    
+    <section class="sec-main">
+        <section class="sec-memo-list">
+            <h2 class="head-title">MEMO LIST</h2>
+            <ul id="memo-list"></ul>
+        </section>
+    </section>
+
+    <script>
+        const title = document.querySelector("#title");
+        const content = document.querySelector("#content");
+        const saveBtn = document.querySelector("#save-btn");
+        const deleteBtn = document.querySelector("#delete-btn");
+        const memoList = document.querySelector("#memo-list");
+        const memo = {};
+        const memoArray = [];
+
+        function saveMemo() {
+            memo["title"] = title.value;
+            memo["content"] = content.value;
+            memoArray.push({...memo});
+            // memoArray = [
+                //     ...memoArray,
+                //     {title: title.value, content: content.value},
+                // ];
+                
+            localStorage.setItem("메모", JSON.stringify(memoArray));
+
+            showMemo(memo.title, memo.content);
+
+            title.value = "";
+            content.value = "";
+        };
+
+        function showMemo(title, content) {
+            const li = document.createElement("li");
+            const h2 = document.createElement("h2");
+            const p = document.createElement("p");
+
+            h2.innerHTML = title;
+            p.innerHTML = content;
+
+            li.appendChild(h2);
+            memoList.appendChild(li);
+
+            li.addEventListener('click', () => {
+                li.classList.toggle('clicked')
+                li.appendChild(p);
+            });
+        };
+
+        function deleteMemo() {
+
+        };
+
+        saveBtn.addEventListener('click', saveMemo);
+        deleteBtn.addEventListener('click', deleteMemo);
+    </script>
+</body>
+</html>

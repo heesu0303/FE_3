@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        :root {
+            --main-bgColor: teal;
+            --main-txtColor: white;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 1.5em;
+            background-color: var(--main-bgColor);
+        }
+
+        .wrap {
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+
+        }
+        
+        .picker {
+            display: inline-block;
+        }
+
+        .picker + .picker {
+            margin-left: 30px;
+        }
+
+        main {
+            color: var(--main-txtColor);
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <article class="picker">
+            <label for="bg">배경색 : </label>
+            <input id="bg" class="inp-picker" type="color" data-id="bgColor">
+        </article>
+        <article class="picker">
+            <label for="txt">글씨색 : </label>
+            <input id="txt" class="inp-picker" type="color" data-id="txtColor">
+        </article>
+    </section>
+    <main>
+        <h1>Color Picker</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur delectus, quae consectetur facere voluptatibus adipisci quaerat exercitationem laborum inventore, necessitatibus alias ex, hic quidem molestiae eius iusto. Dolorum, quod praesentium!</p>
+    </main>
+
+    <script>
+        // wysiwyg 위지위그
+        const inpPicker = document.querySelectorAll('.inp-picker');
+
+        inpPicker.forEach((item) => {
+            item.addEventListener('input', () => {
+                // data-id의 값을 자바스크립트에서 dataset.id로 가져올 수 있다.
+                const name = `--main-${event.target.dataset.id}`; 
+                const root = document.querySelector(':root');
+
+                root.style.setProperty(name, event.target.value);
+            })
+        })
+    </script>
+</body>
+</html>

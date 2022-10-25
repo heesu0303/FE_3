@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자</title>
+</head>
+
+<body>
+    <script>
+        function NewFactory(name) {
+            this.name = name;
+            this.sayYourName = function () {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+        }
+
+        let robot1 = new NewFactory('브랜든');
+
+        // 실습 : 음식 이름의 배열을 전달하면 배열안에서 랜덤하게 메뉴를 뽑아내는 로봇객체의 생성자를 만들어보세요.
+
+        function Foodrobot(food) {
+            this.name = food;
+            this.random = function() {
+                const randomFood = food[Math.floor(Math.random() * food.length)];
+                console.log(`오늘은 ${randomFood}를 드십시오.`);
+            }
+        }
+        let foodArr = ['돈가스', '제육볶음', '햄버거', '피자', '마라탕', '파스타', '삼겹살', '소고기']
+        let robot = new Foodrobot(foodArr);
+        robot.random();
+    </script>
+</body>
+
+</html>

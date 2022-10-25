@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체지향 프로그래밍</title>
+</head>
+
+<body>
+    <script>
+        // const me = {
+        //     name: '웨이드',
+        //     address: '제주도 제주시 인다 1길',
+        //     phoneNum: '010-8001-6536',
+        //     canWalk: function () {
+        //         console.log('웨이드가 걷는다.');
+        //     },
+        //     teaching: function (student) {
+        //         student.levelUp();
+        //     }
+        // }
+
+        // const student = {
+        //     level: 1,
+        //     levelUp : function(){
+        //         this.level++;
+        //     }
+        // }
+
+        // me.teaching(student);
+
+        const me = {
+            name: '장희수',
+            address: '서울',
+            phoneNum: '010-6317-7142',
+            studing: 'JS',
+            canJogging: function (jogging) {
+                jogging.health();
+            }
+        }
+        const jogging = {
+            with: 'jadu',
+            healthUp: 1,
+            health: function() {
+                this.healthUp++;
+            }
+        }
+        me.canJogging(jogging);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requestAnimationFrame 사용후</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            /* transition: .2s; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // 실습 : div 태그로 상자를 하나 만들고 키보드의 화살표 키를 눌러 왼쪽, 오른쪽으로 이동하도록 만들어 보세요.
+        const box = document.querySelector('.box');
+        let pos = 0;
+
+        // 사용자가 누르는 키의 상태를 저장하는 객체
+        let keys = {};
+        // ArrowLeft: true;
+
+        function move(event) {
+            keys[event.key] = true;
+        }
+
+        function stop(event) {
+            keys[event.key] = false;
+        }
+
+        document.addEventListener('keydown', move);
+        document.addEventListener('keyup', stop);
+        
+        function play() {
+            if (keys.ArrowRight) {
+                pos += 5;
+                box.style.transform = `translateX(${pos}px)`
+            }
+            if (keys.ArrowLeft) {
+                pos -= 5;
+                box.style.transform = `translateX(${pos}px)`;
+            }
+
+
+            // 안정적이다. 게임만들 때!!!
+            // 사용자가 이벤트를 발생시켰을 때, 변화가 생기면 이 함수에서 대응할 수 있다. 
+            window.requestAnimationFrame(play);
+        }
+
+        window.requestAnimationFrame(play);
+    </script>
+</body>
+</html>

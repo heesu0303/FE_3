@@ -101,7 +101,17 @@ zip([10, 20, 30, 40, 50], "hello"); // 성공
 문제 링크 : https://codingdojang.com/scode/393
 
 -   풀이
-
+    ```js
+    // 내 답
+    let arr = Array(10000).fill(0).map((_, index) => (index + 1)).join('');
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === '8') {
+            count++;
+        }
+    }
+    console.log(count);
+    ```
     ```js
     // '123433332121'.match(/1/g)
     // (3) ['1', '1', '1']

@@ -319,15 +319,16 @@ zip([10, 20, 30, 40, 50], "hello"); // 성공
 
 ### 1.4.1 스택과 큐
 
-    * 스택 : (삽입)arr.push, (삭제)arr.pop
-    * 큐: (삽입)arr.push, (삭제)arr.shift
-    * 큐: (삽입)arr.unshift, (삭제)arr.pop
-    * arr.unshift(1000) : 맨 앞에 1000을 삽입합니다.
-    * arr.shift() : 맨 앞에 값을 꺼냅니다.
-    * arr.push : 맨 뒤에 값을 삽입합니다.
-    * arr.pop : 맨 뒤에 값을 꺼냅니다.
+* 스택 : (삽입)arr.push, (삭제)arr.pop
+* 큐: (삽입)arr.push, (삭제)arr.shift
+* 큐: (삽입)arr.unshift, (삭제)arr.pop
+* arr.unshift(1000) : 맨 앞에 1000을 삽입합니다.
+* arr.shift() : 맨 앞에 값을 꺼냅니다.
+* arr.push : 맨 뒤에 값을 삽입합니다.
+* arr.pop : 맨 뒤에 값을 꺼냅니다.
 
-    ```javascript
+
+    ```js
     class Stack {
         constructor(){
             this.arr = []; // 연결리스트로 구현할 수도 있지만, 지금 배우지 않았기에 배열로 구현합니다.
@@ -384,7 +385,7 @@ zip([10, 20, 30, 40, 50], "hello"); // 성공
 
 1. step 1 - object로 linkedlist 구현
 
-```javascript
+```js
 // 여러분이 다 이해하실 수 있는 코드로 설명해보겠습니다.
 const list = {
     head: {

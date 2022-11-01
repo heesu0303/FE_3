@@ -102,18 +102,20 @@ body {
     box-shadow: none;
 }
 
-.section-item .figure-item img {
+.section-item .list-item img {
     width: 35.86px;
     margin-top: 10px;
 }
 
-.section-item .figure-item figcaption {
+.section-item .list-item .item-name {
+    display: inline-block;
     font-size: 9px;
     color: initial;
     margin: 2px 0 5px 0;
 }
 
-.section-item .figure-item p {
+.section-item .list-item .item-price {
+    display: inline-block;
     width: 70px;
     height: 22px;
     background-color: #6327FE;
@@ -125,7 +127,7 @@ body {
     margin-bottom: 9px;
 }
 
-.section-item .figure-item p::after {
+.section-item .list-item .item-price::after {
     content: '원';
 }
 
@@ -197,6 +199,11 @@ input:focus {
 }
 
 .list-choice-item li {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    
     width: 170px;
     height: 46px;
     background-color: white;
@@ -204,22 +211,22 @@ input:focus {
     border-radius: 6px;
 }
 
-.list-choice-item .figure-choice-item {
+/* .list-choice-item .listdiv {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     justify-items: center;
-}
-.figure-choice-item img {
+} */
+.list-choice-item img {
     width: 18px;
 }
-.figure-choice-item figcaption {
+.list-choice-item .item-name {
     font-size: 9px;
     font-weight: 500;
     color: #333333;
     margin: 18px 0 18px -25px;
 }
-.figure-choice-item p {
+.list-choice-item .item-amount {
     width: 30px;
     height: 30px;
     border: 2px solid #BDBDBD;
@@ -298,23 +305,23 @@ input:focus {
     border-radius: 6px;
 }
 
-.list-my-item .figure-my-item {
+.list-my-item li {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     justify-items: center;
 }
-.figure-my-item img {
+.list-my-item img {
     width: 18px;
     margin-left: -25px;
 }
-.figure-my-item figcaption {
+.list-my-item .item-name {
     font-size: 9px;
     font-weight: 500;
     color: #333333;
     margin: 18px 0 18px -120px;
 }
-.figure-my-item p {
+.list-my-item .item-amount {
     width: 30px;
     height: 30px;
     border: 2px solid #BDBDBD;

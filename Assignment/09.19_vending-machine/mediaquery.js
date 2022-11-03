@@ -1,3 +1,4 @@
+// 음료 리스트
 const listItem = document.querySelector('.list-item');
 const btnItem = listItem.querySelectorAll('.btn-item');
 const itemImg = listItem.querySelectorAll('.item-img');
@@ -6,9 +7,11 @@ const itemPrice = listItem.querySelectorAll('.item-price');
 const item = {};
 const itemArray = [];
 
+// 선택한 음료 리스트
 const listChoiceItem = document.querySelector('.list-choice-item');
 
-// 음료 선택
+
+// 음료 선택시 객체 저장
 function choiceItem(itemName, itemPrice, itemImg) {
     item['name'] = itemName;
     item['price'] = itemPrice;
@@ -19,6 +22,7 @@ function choiceItem(itemName, itemPrice, itemImg) {
     showItem(item.img, item.name);
 }
 
+// 선택한 음료 리스트 보여주는 함수
 function showItem(itemImg, itemName) {
     const li = document.createElement('li');
     const img = document.createElement('img');
@@ -39,6 +43,7 @@ function showItem(itemImg, itemName) {
 
 }
 
+// 음료 버튼 클릭시 순회
 btnItem.forEach(item => {
     item.addEventListener('click', () => {
         const itemName = item.querySelector('.item-name').innerHTML;

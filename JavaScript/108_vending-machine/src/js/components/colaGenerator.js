@@ -3,12 +3,15 @@ class ColaGenerator {
         this.itemList = document.querySelector('.list-item');
     }
 
-    setUp() {
-        this.loadData((json) => {
-            this.colaFactory(json);
-        });
+    async setup() {
+        await this.loadData(
+            (json) => {
+                this.colaFactory(json);
+            }
+        );
     }
-    
+
+    // await는 반드시 async 함수안에서만 작동합니다.
     async loadData(callback) {
         // 구 방식
         // AJAX : Asynchronous Javascript And XML
@@ -28,6 +31,11 @@ class ColaGenerator {
 
 
         // 신 방식
+        // fetch()를 호출하면 브라우저는 네트워크 요청을 보내고 프라미스가 반환됩니다. 
+        // await를 통해 프라미스 객체가 반환되기를 기다립니다.
+        // 일반적인 fetch 요청은 두 개의 await 호출로 구성됩니다.
+        // await fetch(url, options); // 통신 요청
+        // await response.json(); // json 본문을 읽음
         const response = await fetch('src/js/item.json');
 
         if (response.ok) { // http 상태코드가 200 ~ 299일 경우를 의미
@@ -37,6 +45,7 @@ class ColaGenerator {
         }
     }
 
+    // 콜라를 생산하는 함수입니다.
     colaFactory(data) {
         const docFrag = document.createDocumentFragment();
         data.forEach((el) => {

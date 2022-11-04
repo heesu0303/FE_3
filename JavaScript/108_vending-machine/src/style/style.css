@@ -207,6 +207,11 @@ body {
     height: 32px;
 }
 
+.cont-buy .btn-get {
+    background-color: #6327FE;
+    color: white;
+}
+
 
 /* 나의 정보 스타일 */
 .my-info .cont-mymoney {

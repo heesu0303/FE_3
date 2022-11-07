@@ -50,6 +50,7 @@ class Vendingmachine {
                 // 입금액이 소지금보다 적다면 
                 if (inputCost <= myMoneyVal && inputCost > 0) {
                     //Intl.NumberFormat : 언어에 맞는 숫자 서식을 문자열로 반환합니다. IE11 부터 지원 
+                    // toLocaleString() 도 있다!
                     this.myMoney.textContent = new Intl.NumberFormat().format(myMoneyVal - inputCost) + ' 원';
                     this.balance.textContent = new Intl.NumberFormat().format((balanceVal ? balanceVal : 0) + inputCost) + ' 원';
                 } else {
@@ -142,9 +143,10 @@ class Vendingmachine {
         this.btnGet.addEventListener('click', (event) => {
             let isGot = false;
             let totalPrice = 0;
-
+            
             // 내가 고른 음료수 목록과 이미 구입한 목록을 비교
             for (const itemStaged of this.stagedList.querySelectorAll('li')) {
+                isGot = false;
                 for (const itemGot of this.gotList.querySelectorAll('li')) {
                     let itemGotCount = itemGot.querySelector('.num-counter');
                     // 획득할 아이템이 이미 획득한 음료 리스트에 존재하는지 확인

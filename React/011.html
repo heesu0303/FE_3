@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>리액트 1분만에 추가해보기!</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+            function 자기소개(props) {
+                return (
+                    <div>
+                        <p>제 이름은 {props.name} 입니다.</p>
+                        <p>제 나이은 {props.age}살 입니다.</p>
+                        <p>제 성별은 {props.gender} 입니다.</p>
+                        <p>제 통장은 {props.money}원 입니다.</p>
+                        <p>제 취미는 {props.hobby} 입니다.</p>
+                    </div>
+                )
+            }
+
+            function 자기소개2(value) {
+                return (
+                    <div>
+                        <p>제 이름은 {value.name} 입니다.</p>
+                        <p>제 나이은 {value.age}살 입니다.</p>
+                        <p>제 성별은 {value.gender} 입니다.</p>
+                        <p>제 통장은 {value.money}원 입니다.</p>
+                        <p>제 취미는 {value.hobby} 입니다.</p>
+                    </div>
+                )
+            }
+
+            function 자기소개3({name, age, gender, money, hobby}) {
+                return (
+                    <div>
+                        <p>제 이름은 {name} 입니다.</p>
+                        <p>제 나이은 {age}살 입니다.</p>
+                        <p>제 성별은 {gender} 입니다.</p>
+                        <p>제 통장은 {money}원 입니다.</p>
+                        <p>제 취미는 {hobby} 입니다.</p>
+                    </div>
+                )
+            }
+
+            const app = (
+                <main>
+                    <자기소개 
+                        name="장희수" 
+                        age="28"
+                        gender="여자"
+                        money="1000"
+                        hobby="코딩하기"
+                    />
+                    <자기소개 
+                        name="장희수" 
+                        age="28"
+                        gender="여자"
+                        money={1000}
+                        hobby="코딩하기"
+                    />
+                    {자기소개({
+                        name: "장희수", 
+                        age: "28",
+                        gender: "여자",
+                        money: "1000",
+                        hobby: "코딩하기"
+                    })}
+                    <자기소개2
+                        name="장희수" 
+                        age="28"
+                        gender="여자"
+                        money={1000}
+                        hobby="코딩하기"
+                    />
+                    <자기소개3
+                        name="장희수" 
+                        age="28"
+                        gender="여자"
+                        money={1000}
+                        hobby="코딩하기"
+                    />
+                </main>
+            );
+
+            const domContainer = document.querySelector("#root");
+            ReactDOM.render(app, domContainer);
+        </script>
+    </body>
+</html>

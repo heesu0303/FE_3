@@ -175,17 +175,42 @@
                 }
             ]
 
+            // step1
+            // function ProductList() {
+            //     return (
+            //         <ul>
+            //             {[
+            //                 <ProductInfo item={productData[0]}/>,
+            //                 <ProductInfo item={productData[1]}/>,
+            //                 <ProductInfo item={productData[2]}/>,
+            //                 <ProductInfo item={productData[3]}/>,
+            //                 <ProductInfo item={productData[4]}/>,
+            //                 <ProductInfo item={productData[5]}/>,
+            //             ]}
+            //         </ul>
+            //     )
+            // }
+
+            // step 2
+            // function ProductList() {
+            //     // console.log(productData);
+            //     let result = [];
+            //     productData.forEach((i) => {
+            //         result.push(<ProductInfo item={i} key={i.id} />);
+            //     });
+            //     return <ul>{result}</ul>;
+            // }
+
+            // step 3
             function ProductList() {
+                // console.log(productData);
                 return (
                     <ul>
-                        <ProductInfo item={productData[0]}/>
-                        <ProductInfo item={productData[0]}/>
-                        <ProductInfo item={productData[0]}/>
-                        <ProductInfo item={productData[0]}/>
-                        <ProductInfo item={productData[0]}/>
-                        <ProductInfo item={productData[0]}/>
+                        {productData.filter(v => v.price <= 5000).map((i) => (
+                            <ProductInfo item={i} key={i.id} />
+                        ))}
                     </ul>
-                )
+                );
             }
 
             function ProductInfo(props) {

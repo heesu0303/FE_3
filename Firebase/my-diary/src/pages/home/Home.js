@@ -1,5 +1,9 @@
-import styles from "./Home.module.css";
+import styles from './Home.module.css'
 
 export default function Home() {
-    return <div>HOME</div>;
+    return (
+        <div>
+            HOME
+        </div>
+    )
 }

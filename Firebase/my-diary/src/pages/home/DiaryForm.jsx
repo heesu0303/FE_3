@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useFirestore } from "../../hooks/useFirestore";
 
-export default function DiaryForm() {
+export default function DiaryForm({ uid }) {
     const [title, setTitle] = useState("");
     const [text, setText] = useState("");
+    const { addDocument, response } = useFirestore("myDiary");
 
     const handleData = (event) => {
         if (event.target.id === "tit") {
@@ -12,9 +15,21 @@ export default function DiaryForm() {
         }
     };
 
+    useEffect(() => {
+        if (response.success) {
+            setTitle("");
+            setText("");
+        }
+    }, [response.success]);
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(title, text);
+        addDocument({
+            uid,
+            title,
+            text,
+        });
     };
 
     return (
@@ -40,7 +55,7 @@ export default function DiaryForm() {
                         onChange={handleData}
                     ></textarea>
 
-                    <button>저장</button>
+                    <button>저장하기</button>
                 </fieldset>
             </form>
         </>
